@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>test</title>
+  </head>
+  <body>
+    <style>
+      [class*="slider"] canvas{
+        display: block;
+        margin: 0 auto;
+        max-width: 100%;
+        height: auto;
+      }
+      [class*="slider"]{
+        border: 1px solid #ccc;
+      }
+    </style>
+    <div class="slider"></div>
+    <div class="slider1"></div>
+    <script src="vim-canvas-slider.js"></script>
+    <script>
+      'use strict';
+      new VimCanvasSlider({
+        container:'.slider',
+        images:[
+          'images/1.jpg',
+          'images/2.jpg',
+          'images/3.jpg',
+          'images/4.jpg',
+          'images/5.jpg',
+        ]
+      });
+     new VimCanvasSlider({
+        container:'.slider1',
+        images:[
+          'images/5.jpg',
+          'images/2.jpg',
+          'images/1.jpg',
+          'images/4.jpg',
+          'images/3.jpg'
+        ],
+        speed: 15,
+        size:{height: 300},
+        whiteSpace: 0
+      });
+    </script>
+  </body>
+</html>
